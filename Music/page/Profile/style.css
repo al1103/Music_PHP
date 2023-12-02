@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form-name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+.profile{
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+
+}
+.profile-picture-upload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture-upload img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .personal-information {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    margin-bottom: 10px;
+    flex: 1;
+  }
+  
+  .form-control {
+    min-width: 200px; /* Adjust input width here */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Fixed issues */
+  
+  /* Remove overlap between input and label */
+  .form-control {
+    position: relative;
+  }
+  
+ 
+  /* Fix overlapping buttons */
+  .overlap-4 {
+    margin-left: 0;
+  }
+  
+  /* Position label above input */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Place firstname and lastname in same row */
+
+
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+.profile-picture-upload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.form-control-file {
+    display: none;
+}
+.profile-information {
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+.profile-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-user-fn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-user-ln {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-user-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

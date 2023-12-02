@@ -1,0 +1,179 @@
+<?php
+require("../../config.php");
+if (isset($_POST['login'])) {
+  header("location: ../Login/index.php");
+}
+if (isset($_POST['register'])) {
+  header("location: ../SignUp/index.php");
+}
+?>
+
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/Header.css" />
+  <link rel="stylesheet" href="../../css/Sidebar.css" />
+  <link rel="stylesheet" href="../../css/Main.css" />
+  <link rel="stylesheet" href="../../css/Control.css" />
+</head>
+
+<body>
+  <style>
+    .item {
+      border: 0px;
+      padding: 10px 20px;
+      cursor: pointer;
+      line-height: 1;
+      letter-spacing: inherit;
+      border-radius: 9999px;
+      display: inline-flex;
+      vertical-align: middle;
+      text-decoration: none;
+      overflow-wrap: break-word;
+      position: relative;
+      color: aliceblue;
+      background-color: rgb(134, 63, 63);
+      border-radius: 9999px;
+      margin-inline-end: 10px;
+    }
+  </style>
+  <div class="container" style="min-height: 100vh">
+    <header>
+      <div class="header__inner">
+        <div class="navigate">
+          <div class="navigate__icon" id="back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M10.5999 12.71C10.5062 12.617 10.4318 12.5064 10.381 12.3846C10.3303 12.2627 10.3041 12.132 10.3041 12C10.3041 11.868 10.3303 11.7373 10.381 11.6154C10.4318 11.4936 10.5062 11.383 10.5999 11.29L15.1899 6.71C15.2836 6.61704 15.358 6.50644 15.4088 6.38458C15.4596 6.26272 15.4857 6.13201 15.4857 6C15.4857 5.86799 15.4596 5.73728 15.4088 5.61542C15.358 5.49356 15.2836 5.38296 15.1899 5.29C15.0026 5.10375 14.7491 4.99921 14.4849 4.99921C14.2207 4.99921 13.9673 5.10375 13.7799 5.29L9.18992 9.88C8.62812 10.4425 8.31256 11.205 8.31256 12C8.31256 12.795 8.62812 13.5575 9.18992 14.12L13.7799 18.71C13.9662 18.8947 14.2176 18.9989 14.4799 19C14.6115 19.0008 14.742 18.9755 14.8638 18.9258C14.9857 18.876 15.0965 18.8027 15.1899 18.71C15.2836 18.617 15.358 18.5064 15.4088 18.3846C15.4596 18.2627 15.4857 18.132 15.4857 18C15.4857 17.868 15.4596 17.7373 15.4088 17.6154C15.358 17.4936 15.2836 17.383 15.1899 17.29L10.5999 12.71Z" fill="white" />
+            </svg>
+          </div>
+          <div class="navigate__icon" id="forward">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15.3999 9.88L10.8099 5.29C10.6225 5.10375 10.369 4.99921 10.1049 4.99921C9.84068 4.99921 9.58723 5.10375 9.39986 5.29C9.30613 5.38296 9.23174 5.49356 9.18097 5.61542C9.1302 5.73728 9.10406 5.86799 9.10406 6C9.10406 6.13201 9.1302 6.26272 9.18097 6.38458C9.23174 6.50644 9.30613 6.61704 9.39986 6.71L13.9999 11.29C14.0936 11.383 14.168 11.4936 14.2188 11.6154C14.2695 11.7373 14.2957 11.868 14.2957 12C14.2957 12.132 14.2695 12.2627 14.2188 12.3846C14.168 12.5064 14.0936 12.617 13.9999 12.71L9.39986 17.29C9.21156 17.477 9.10524 17.7311 9.10431 17.9965C9.10337 18.2618 9.20789 18.5167 9.39486 18.705C9.58184 18.8933 9.83596 18.9996 10.1013 19.0006C10.3667 19.0015 10.6216 18.897 10.8099 18.71L15.3999 14.12C15.9617 13.5575 16.2772 12.795 16.2772 12C16.2772 11.205 15.9617 10.4425 15.3999 9.88Z" fill="white" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="search">
+          <div class="search__contents">
+            <form class="search__contents__box" action="index.php" method="GET">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M25.9998 24.4689L19.2159 17.6851C20.9781 15.5299 21.8445 12.7798 21.6359 10.0038C21.4273 7.22769 20.1597 4.63798 18.0953 2.7703C16.0309 0.902627 13.3276 -0.100126 10.5445 -0.0305419C7.76151 0.0390426 5.11169 1.17564 3.14318 3.14415C1.17466 5.11267 0.038066 7.76249 -0.0315185 10.5455C-0.101103 13.3285 0.90165 16.0319 2.76933 18.0963C4.637 20.1607 7.22671 21.4283 10.0028 21.6369C12.7789 21.8455 15.5289 20.9791 17.6841 19.2169L24.4679 26.0007L25.9998 24.4689ZM10.8331 19.5007C9.11899 19.5007 7.44338 18.9925 6.01815 18.0401C4.59293 17.0878 3.4821 15.7343 2.82614 14.1507C2.17018 12.567 1.99855 10.8245 2.33296 9.14329C2.66736 7.46212 3.49278 5.91787 4.70484 4.70581C5.91689 3.49376 7.46114 2.66834 9.14231 2.33393C10.8235 1.99953 12.5661 2.17116 14.1497 2.82712C15.7333 3.48308 17.0869 4.59391 18.0392 6.01913C18.9915 7.44436 19.4998 9.11997 19.4998 10.8341C19.4972 13.1318 18.5833 15.3347 16.9585 16.9595C15.3337 18.5842 13.1308 19.4982 10.8331 19.5007Z" fill="#fff" />
+              </svg>
+
+
+              <input type="text" onchange="handleSearch(this.value)" name="search" placeholder="what do you want to listen" id="Search" />
+            </form>
+          </div>
+        </div>
+        <div class="user">
+          <button class="notification">
+            <svg role="img" height="16" width="16" aria-hidden="true" class="Svg-sc-ytk21e-0 haNxPq t93PZphItuM19kPhX7tC" viewBox="0 0 16 16" data-encore-id="icon">
+              <path d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z"></path>
+            </svg>
+          </button>
+          <form class="box-user" method="post" action="index.php">
+            <button class="Login" type="submit" name="login">LOGIN</button>
+            <button class="Login" type="submit" name="register">REGISTER</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="box">
+      <div class="left-section">
+        <div class="sidebar-top">
+          <div class="home">
+            <a href="/Music/index.php" class="ins">
+              <svg data-encore-id="icon" role="img" aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                <path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
+              </svg>
+
+              <div class="text">Home</div>
+            </a>
+          </div>
+          <div class="search">
+            <a href="./index.php" class="ins">
+              <svg data-encore-id="icon" role="img" aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
+              </svg>
+
+              <div class="text">Search</div>
+            </a>
+          </div>
+        </div>
+        <div class="sidebar-center">
+          <div class="ins">
+            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="icon">
+              <path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path>
+            </svg>
+            <div class="text">Your Music</div>
+          </div>
+          <div class="your-music-items">
+            <ul class="your-music-items-list" id="your-music">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>         
+    <div id="main">
+            </div>
+            <div class="frame" id="frame">
+      <div class="select">
+        <div class="select__content">
+          <ul class="select__content__list " id="select" name="option">
+            <li class="item active" onclick="handleChangeSearch('Albums')">Albums</li>
+            <li class="item" onclick="handleChangeSearch('Songs')">Songs</li>
+            
+            <li class="item" onclick="handleChangeSearch('Playlists')">Playlists</li>
+            <li class="item" onclick="handleChangeSearch('Artists')">Artists</li>
+          </ul>
+
+        </div>
+
+      </div>
+      <div class="main__content">
+        <div class="main__content__list" id="livesearch">
+
+        </div>
+      </div>
+            </div>
+
+    </main>
+
+      <script>
+        function handleSearch(keyword) {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "LayoutSearch.php", true);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              document.getElementById("livesearch").innerHTML = xhr.responseText;
+            }
+          };
+          xhr.send("q=" + keyword);
+        }
+
+        function handleChangeSearch(option) {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "LayoutSearch.php", true);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              document.getElementById("livesearch").innerHTML = xhr.responseText;
+            }
+          };
+          $value = document.getElementById("Search").value;
+          xhr.send( "option=" + option +"&" + "q=" + $value) ;
+        }
+      </script>
+
+
+</html>
