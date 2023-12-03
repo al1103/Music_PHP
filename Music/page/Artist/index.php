@@ -38,10 +38,10 @@ if(isset($_POST["add_playlist"])){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../../css/globals.css" />
     <link rel="stylesheet" href="../../css/Header.css" />
     <link rel="stylesheet" href="../../css/Sidebar.css" />
     <link rel="stylesheet" href="../../css/Control.css" />
-    <link rel="stylesheet" href="../../css/globals.css" />
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../css/Footer.css" />
     <link rel="stylesheet" href="./style.css" />

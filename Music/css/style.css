@@ -82,3 +82,74 @@
 .box {
   width: 300px;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.song-container {
+  width: 100%;
+  height: 160px;
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #b3b3b3;
+  text-decoration: none;
+  padding: 20px;
+}
+.header-side-area {
+  height: 100%;
+}
+.header-side-area-flex-container {
+}
+.album-art-container {
+}
+.album-art {
+}
+.album-art-image {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.header-area {
+  height: 100%;
+  
+}
+.interactive-area {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.song-title {
+}
+.title-line-clamp {
+}
+.song-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.artist-details {
+}
+.details-line-clamp {
+}
+.artist-link {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 1rem;
+}
+.bottom-area {
+}
+.song-type {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 0.875rem;
+  font-weight: 400;
+
+}

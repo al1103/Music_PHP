@@ -1,8 +1,10 @@
 const main = document.getElementById("main");
 const frame = document.getElementById("frame");
+const button = document.querySelector(".notification");
 show =false;
 function openNotification() {
     show = !show;
+    console.log("hi")   ;
     if (!show) {
         frame.style.display = "block";
         main.style.display = "none";
@@ -23,3 +25,4 @@ function openNotification() {
     }
 }
     
+button.addEventListener("click", openNotification);

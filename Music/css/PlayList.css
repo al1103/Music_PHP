@@ -46,7 +46,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 700;
   color: #ffffff;
   font-size: 12px;
@@ -75,7 +75,7 @@
 .frame .p {
   position: relative;
   width: fit-content;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 500;
   color: #bebebd;
   font-size: 14px;
@@ -103,7 +103,7 @@
   width: fit-content;
   margin-top: -2px;
   -webkit-text-stroke: 1px #ffffff;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 900;
   color: #ffffff;
   font-size: 12px;
@@ -116,7 +116,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 700;
   color: #bebebd;
   font-size: 12px;
@@ -156,7 +156,7 @@
 .frame .text-wrapper-5 {
   position: relative;
   width: 15px;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 700;
   color: #ffffff;
   font-size: 12px;
@@ -198,7 +198,6 @@
   position: absolute;
   top: -1px;
   left: 0;
-  font-family: "Gothic A1", Helvetica;
   font-weight: 600;
   color: #ffffff;
   font-size: 14px;
@@ -208,7 +207,6 @@
 }
 
 .frame .link-2 {
-  font-family: "Gothic A1", Helvetica;
   font-weight: 400;
   color: #b3b3b3;
   font-size: 12px;
@@ -230,7 +228,6 @@
 }
 
 .frame .text-wrapper-6 {
-  font-family: "Gothic A1", Helvetica;
   font-weight: 500;
   color: #b3b3b3;
   font-size: 12px;
@@ -260,7 +257,6 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Gothic A1", Helvetica;
   letter-spacing: 0;
   line-height: 21px;
   white-space: nowrap;
@@ -472,7 +468,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Gothic A1", Helvetica;
+ 
   letter-spacing: 0;
   line-height: 21px;
   white-space: nowrap;
@@ -482,7 +478,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 400;
   color: #ffffff;
   font-size: 12px;
@@ -495,7 +491,7 @@
   position: relative;
   flex: 1;
   margin-top: -1px;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 400;
   color: #ffffff;
   font-size: 12px;
@@ -507,7 +503,7 @@
   position: relative;
   flex: 1;
   margin-top: -1px;
-  font-family: "Gothic A1", Helvetica;
+ 
   font-weight: 300;
   color: #ffffff;
   font-size: 12px;

@@ -73,6 +73,8 @@ if (isset($_POST['update'])) {
 <html lang="en" style="height: 100%">
 
 <head>
+  <link rel="stylesheet" href="../../css/globals.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
