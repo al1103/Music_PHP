@@ -196,3 +196,8 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.link__register button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}

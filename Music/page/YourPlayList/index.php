@@ -15,7 +15,6 @@ if (isset($_POST['logout'])) {
 if (isset($_POST['next'])) {
 }
 if (isset($_POST["add_playlist"])) {
-
     if (isset($_SESSION['user'])) {
         $playlist_name = $_POST['playlist_name'];
         $user_id = $_SESSION['user_id'];
@@ -27,9 +26,6 @@ if (isset($_POST["add_playlist"])) {
         
     }
 }
-
-
-
 
 ?>
 
@@ -112,7 +108,9 @@ if (isset($_POST["add_playlist"])) {
                     <div class="your-music-items">
                         <ul class="your-music-items-list" id="your-music">
                             <?php
-                            $sql = "SELECT `id`, `name`, `user_id`, `image_url` FROM `your_playlist`";
+                            if (isset($_SESSION['user'])) {
+                                $user_id = $_SESSION['user_id'];
+                            $sql = "SELECT `id`, `name`, `user_id`, `image_url` FROM `your_playlist` WHERE `user_id` = '$user_id'";
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
@@ -135,7 +133,7 @@ if (isset($_POST["add_playlist"])) {
                        </a>
                        </li>';
                                 }
-                            }
+                            }}
 
                             ?>
 

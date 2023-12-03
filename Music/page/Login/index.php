@@ -9,7 +9,7 @@ if ( isset($_POST['login'])) {
     $email =  $_POST['email'];
     $password =$_POST['password'];
 
-    $sql = "SELECT `id` , `email`, `password`, `image_url` FROM `users`  WHERE `email` = '$email'";
+    $sql = "SELECT `id` ,`lastname`, `email`, `password`, `image_url` FROM `users`  WHERE `email` = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -21,6 +21,8 @@ if ( isset($_POST['login'])) {
             // Login successful
             $_SESSION['user'] = $row['email'];
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['name'] = $row['lastname'];
+
             if ($row['image_url'] != null) {
                 $_SESSION['image_url'] = $row['image_url'];
             } else {

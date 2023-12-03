@@ -200,3 +200,7 @@ form{
   display: flex;
   gap: 10px;
 }
+.addPlaylist{
+  position: absolute;
+  right: 10px;
+}

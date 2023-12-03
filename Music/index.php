@@ -25,16 +25,12 @@ if (isset($_POST["add_playlist"])) {
       echo 'success';
     }
   }
+  else {
+    echo 'can phia login truoc khi them moi';
+  }
 }
 
 
-$sql = "SELECT `id`, `name`, `user_id` FROM `your_playlist`";
-
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  echo 'success';
-}
 
 ?>
 
@@ -99,7 +95,7 @@ if ($result->num_rows > 0) {
 <div class="input_add_playlist" id="input_add_playlist">
       <form action="index.php" method="post">
         <input type="text" name="playlist_name" />
-        <div class="button">
+        <div class="button" required>
 
         <button class="button-30" role="button" 
         onclick="document.getElementById(\'input_add_playlist\').style.display=\'none\'"
@@ -121,12 +117,15 @@ if ($result->num_rows > 0) {
           <div class="your-music-items">
             <ul class="your-music-items-list" id="your-music">
               <?php
-              $sql = "SELECT  `id`, `name`, `user_id`, `image_url` FROM `your_playlist`";
-              $result = $conn->query($sql);
+              if (isset($_SESSION['user'])) {
+                $user_id = $_SESSION['user_id'];
 
-              if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                  echo '<li >
+                $sql = "SELECT  `id`, `name`, `user_id`, `image_url` FROM `your_playlist` WHERE `user_id` = '$user_id'";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+                    echo '<li >
                        <a href="./page/YourPlaylist/index.php?id=' . $row['id'] . '" class="items">
                          <div class="items-img">
                            <img
@@ -144,6 +143,7 @@ if ($result->num_rows > 0) {
                          
                        </a>
                        </li>';
+                  }
                 }
               }
 
