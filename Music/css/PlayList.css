@@ -490,8 +490,7 @@
 .frame .text-wrapper-10 {
   position: relative;
   flex: 1;
-  margin-top: -1px;
- 
+ margin-left: -130px;
   font-weight: 400;
   color: #ffffff;
   font-size: 12px;
@@ -601,4 +600,13 @@ footer .right ul li svg{
 }
 .active{
   fill: rgb(0, 255, 94);
+}
+@media only screen and (max-width: 768px) {
+  .text-wrapper-2 {
+    font-size: 24px !important;
+  }
+ 
+    .frame .text-wrapper-10{
+      margin-left: 0;
+    }
 }

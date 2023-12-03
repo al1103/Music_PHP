@@ -66,6 +66,8 @@ if (isset($_POST["add_playlist"])) {
 
               <div class="text">Home</div>
             </a>
+            <div class="close" onclick="closeSidebar()">
+<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg></div>
           </div>
           <div class="search">
             <a href="./page/Search/index.php" class="ins">
@@ -145,6 +147,12 @@ if (isset($_POST["add_playlist"])) {
                        </a>
                        </li>';
                   }
+                }else{
+                  echo '<li class="li">
+                  <div class="items-text">
+                    <div class="items-name">please login to add playlist</div>
+                  </div>
+                  </li>';
                 }
               }
 
@@ -251,6 +259,7 @@ if (isset($_POST["add_playlist"])) {
 </body>
 <script src="./js/WhatsNew.js"></script>
 <script src="./js/addPlayList.js"></script>
+<script src="./js/Sidebar.js"></script>
 
 
 

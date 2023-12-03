@@ -25,9 +25,7 @@ if(isset($_POST["add_playlist"])){
   
     $result = $conn->query($sql);
   
-    if ($result->num_rows > 0) {
-      echo 'success';
-    }
+    
   
 ?>
 
@@ -187,6 +185,7 @@ if(isset($_POST["add_playlist"])){
                     track.artist_id AS track_artist_id,
                     track.genre AS track_genre,
                     track.duration AS track_duration,
+                    track.image_url AS track_image_url,
                     track.preview_url AS track_preview_url
                 FROM album
                 RIGHT JOIN track ON album.id = track.album_id
@@ -210,7 +209,7 @@ if(isset($_POST["add_playlist"])){
         <div class="div-5">
           <div class="text-wrapper-5">' . ($index + 1) . '</div>
           <div class="div-6">
-            <img class="image" src="https://placehold.co/600x400" />
+            <img class="image" src="'. $album['track_image_url'] .'" />
             <div class="div-7">
               <div class="link-wrapper"><div class="link">' . $album['track_title'] . '</div></div>
             </div>
@@ -245,7 +244,6 @@ if(isset($_POST["add_playlist"])){
 <script type="module" src="../../js/control.js"></script>
 <script type="module" src="../../js/Sidebar.js"></script>
 <script src="../../js/Header.js"></script>
-<script src="../../js/WhatsNew.js"></script>
 <script>
 
 </script>

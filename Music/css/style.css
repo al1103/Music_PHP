@@ -153,3 +153,12 @@
   font-weight: 400;
 
 }
+.active{
+  display: block !important;
+  
+}
+@media screen and (max-width: 768px) {
+ .container{
+  display: block;
+ }
+}

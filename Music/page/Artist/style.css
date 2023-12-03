@@ -693,3 +693,15 @@
       font-size: 0.875rem;
       font-weight: 400;
   }
+  @media only screen and (max-width: 768px) {
+    .text-wrapper-2 {
+      font-size: 24px !important;
+    }
+    .footer .right ul li svg{
+      width: 80%;
+    }
+  }
+  .active{
+    display: block !important;
+    
+  }

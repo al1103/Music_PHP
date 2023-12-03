@@ -8,7 +8,7 @@ if (isset($_POST['register'])) {
 }
 ?>
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -131,7 +131,7 @@ if (isset($_POST['register'])) {
       <div class="select">
         <div class="select__content">
           <ul class="select__content__list " id="select" name="option">
-            <li class="item active" onclick="handleChangeSearch('Albums')">Albums</li>
+            <li class="item" onclick="handleChangeSearch('Albums')">Albums</li>
             <li class="item" onclick="handleChangeSearch('Songs')">Songs</li>
             
             <li class="item" onclick="handleChangeSearch('Playlists')">Playlists</li>

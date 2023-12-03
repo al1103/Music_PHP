@@ -6,6 +6,7 @@ $index = 0;
 $sql = "SELECT
 album.image_url AS album_image_url,
 track.id AS track_id,
+track.image_url as track_image_url,
 track.title AS track_name,
 track.duration AS track_duration,
 track.preview_url AS track_preview_url,

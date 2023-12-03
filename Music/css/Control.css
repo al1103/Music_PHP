@@ -30,6 +30,9 @@
   align-items: center;
 }
 .control__play__inner__center__top__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 42px;
   height: 42px;
   & svg {
@@ -196,4 +199,20 @@
 }
 #pause--icon {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  .icon{
+    width: 16px;
+    height: 16px;
+  }
+  svg{
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .control__play__inner__right__icon{
+    display: none;
+  }
+  .control__play__inner__left .icon{
+    display: none;
+  }
 }

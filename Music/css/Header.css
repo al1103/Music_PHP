@@ -81,10 +81,14 @@ header {
 }
 .search__contents__box {
   align-items: center;
+  align-items: flex-start;
+  height: 100%;
   display: flex;
   width: 100%;
 }
 .search__contents__box svg {
+  height: 100% !important;
+
   margin-left: 17px;
   width: 16px;
   color: #fff;
@@ -349,4 +353,26 @@ main {
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+.showMenu{
+  display: none;
+}
+.active{
+  display: block !important;
+  
+}
+@media screen and (max-width: 768px) {
+  .box-user{
+    padding: 0;
+    gap: 5px;
+  }
+  .Login{
+    font-size: 12px;
+  }
+  .showMenu{
+    display: block;
+  }
+  .search__contents__box svg{
+    height: 100% !important;
+  }
 }

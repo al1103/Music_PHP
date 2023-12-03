@@ -71,7 +71,7 @@ if ( isset($_POST['login'])) {
         </div>
       </div>
       <div class="Form__left">
-        <img src="https://i.pinimg.com/564x/c2/b5/a9/c2b5a924d3f25847d87ecaeaf2082326.jpg" alt="ho" />
+        <img src="https://i.pinimg.com/564x/e2/16/32/e21632241037a9926dbb49b257d0c4a3.jpg" alt="ho" />
       </div>
 
       <div class="Form__right">

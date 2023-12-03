@@ -17,3 +17,7 @@ a {
 * {
   font-family: "Gothic A1", sans-serif ;
 }
+.active{
+  display: block !important;
+  
+}

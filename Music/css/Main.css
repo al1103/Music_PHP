@@ -220,3 +220,9 @@
   height: 100%;
   flex-direction: column;
 }
+@media only screen and (max-width: 769px) {
+  .frame .div-4 {
+    justify-content: flex-start !important;
+  }
+  
+}

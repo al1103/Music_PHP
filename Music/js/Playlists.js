@@ -34,7 +34,7 @@ function LoadSongs() {
           const artistName = song.artist_name;
           const album = song.album_name;
           const artistId = song.artist_id;
-          const albumImageUrl = song.album_image_url;
+          const albumImageUrl = song.track_image_url;
           const formattedDuration = formatDuration(trackDuration);
 
           return `
@@ -131,6 +131,7 @@ untidy.addEventListener("click", async () => {
   untidy.classList.toggle("active");
   currentSongIndex = Math.floor(Math.random() * response.length);
   updateSong();
+  console.log("hi");
 });
 
 loop.addEventListener("click", () => {
