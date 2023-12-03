@@ -24,7 +24,7 @@ if (isset($_POST['register'])) {
     )";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location:../../index.php"); // Redirect to a success page
+        header("Location: ../Login/index.php"); // Redirect to a success page
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

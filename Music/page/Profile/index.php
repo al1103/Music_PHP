@@ -55,6 +55,7 @@ if (isset($_POST['update'])) {
 
             if ($stmt->execute()) {
                 echo "Profile updated successfully.";
+                header("Location: Music/index.php");
             } else {
                 echo "Error updating profile: " . $stmt->error;
             }

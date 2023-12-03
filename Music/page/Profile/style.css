@@ -31,6 +31,8 @@
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 20px;
   }
   
   .personal-information {
@@ -144,4 +146,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+input[type="submit"] {
+  outline: none;
+  width: 120px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  color: #b3b3b3;
+  font-size: 14px;
 }
